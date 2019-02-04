@@ -22,5 +22,47 @@ public class Idea {
 
     @NonNull
     @ColumnInfo(name = "date")
-    private int date;
+    private long date;
+
+    public Idea(@NonNull int id, @NonNull String text, String category, @NonNull long date) {
+        this.id = id;
+        this.text = text;
+        this.category = category;
+        this.date = date;
+    }
+
+    @NonNull
+    public int getId() {
+        return id;
+    }
+
+    public void setId(@NonNull int id) {
+        this.id = id;
+    }
+
+    @NonNull
+    public String getText() {
+        return text;
+    }
+
+    public void setText(@NonNull String text) {
+        this.text = text;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    @NonNull
+    public long getDate() {
+        return date;
+    }
+
+    public void setDate(@NonNull long date) {
+        this.date = date;
+    }
 }
