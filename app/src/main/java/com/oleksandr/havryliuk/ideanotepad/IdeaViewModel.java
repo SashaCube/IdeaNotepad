@@ -12,7 +12,7 @@ public class IdeaViewModel extends ViewModel {
 
     public IdeaViewModel(){
         repository = new IdeasRepository();
-        ideas = repository.getIdeas();
+        ideas = repository.getAllIdeas();
     }
 
 
