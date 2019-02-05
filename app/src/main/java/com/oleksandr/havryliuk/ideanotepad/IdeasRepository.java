@@ -27,6 +27,19 @@ public class IdeasRepository {
         return mIdeaDao.getAllIdeas();
     }
 
+    public LiveData<List<Idea>> orderBy(String order){
+        switch (order){
+            case IdeaViewModel.IDEA:
+                return mIdeaDao.getIdeasOrderByIdea();
+            case IdeaViewModel.CATEGORY:
+                return mIdeaDao.getIdeasOrderByCategory();
+            case IdeaViewModel.TIME:
+                return mIdeaDao.getAllIdeas();
+                default:
+                    return mIdeaDao.getAllIdeas();
+        }
+    }
+
     public void insert(Idea idea){
         executor.execute(() -> {
             mIdeaDao.insert(idea);

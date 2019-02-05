@@ -18,4 +18,10 @@ public interface IdeaDao {
 
     @Query("SELECT * FROM ideas ORDER BY date DESC")
     LiveData<List<Idea>> getAllIdeas();
+
+    @Query("SELECT * FROM ideas ORDER BY text")
+    LiveData<List<Idea>>  getIdeasOrderByIdea();
+
+    @Query("SELECT * FROM ideas ORDER BY category")
+    LiveData<List<Idea>>  getIdeasOrderByCategory();
 }
