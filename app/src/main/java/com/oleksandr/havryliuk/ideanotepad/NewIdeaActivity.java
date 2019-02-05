@@ -9,6 +9,10 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.oleksandr.havryliuk.ideanotepad.utils.PreferenceManager;
+
+import java.util.Set;
+
 public class NewIdeaActivity extends AppCompatActivity {
 
     public static final String EXTRA_IDEA = "idea";
@@ -26,9 +30,10 @@ public class NewIdeaActivity extends AppCompatActivity {
 
         // autocomplete
         mEditCategoryView = findViewById(R.id.edit_category);
-        String[] cities = getResources().getStringArray(R.array.categories);
+        Set<String> keys = PreferenceManager.getAllKeys();
+        String[] categories = keys.toArray(new String[keys.size()]);
         ArrayAdapter<String> stringArrayAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cities);
+                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, categories);
         mEditCategoryView.setAdapter(stringArrayAdapter);
 
         final Button button = findViewById(R.id.button_save);

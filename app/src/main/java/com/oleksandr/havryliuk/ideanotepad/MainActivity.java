@@ -8,11 +8,12 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.oleksandr.havryliuk.ideanotepad.UI.IdeaViewModel;
+import com.oleksandr.havryliuk.ideanotepad.UI.IdeasAdapter;
+import com.oleksandr.havryliuk.ideanotepad.repository.Idea;
 import com.oleksandr.havryliuk.ideanotepad.utils.PreferenceManager;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

@@ -70,6 +70,10 @@ public class PreferenceManager {
 
 
     // GETTERS
+    public static Set<String> getAllKeys(){
+        return sPref.getAll().keySet();
+    }
+
     public static Set<String> getStringSet(String key) {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
             return sPref.getStringSet(key, null);

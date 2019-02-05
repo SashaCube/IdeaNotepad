@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
-        android:hint="Go to cinema now =)"
+        android:hint="some idea..."
         android:textSize="18sp" />
 
 
@@ -41,7 +41,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:fontFamily="sans-serif-light"
-        android:hint="Go to cinema now =)"
+        android:hint="work..."
         android:textSize="18sp" />
 
     <Button

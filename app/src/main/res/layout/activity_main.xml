@@ -6,7 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/idea_sort"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_icons8_idea"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"/>
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/category_sort"
+            android:layout_weight="1"
+            android:src="@drawable/ic_list"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"/>
+
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/time_sort"
+            android:layout_weight="1"
+            android:src="@drawable/ic_time"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
     <android.support.v4.widget.NestedScrollView
+        android:layout_marginTop="41dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -14,42 +57,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:clickable="true"
-                    android:id="@+id/idea_sort"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_icons8_idea"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_margin="8dp"/>
-
-               <ImageView
-                   android:clickable="true"
-                   android:id="@+id/category_sort"
-                   android:layout_weight="1"
-                   android:src="@drawable/ic_list"
-                   android:layout_width="24dp"
-                   android:layout_height="24dp"
-                   android:layout_margin="8dp"/>
-
-
-                <ImageView
-                    android:clickable="true"
-                    android:id="@+id/time_sort"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_time"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_margin="8dp"/>
-
-            </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerview"
