@@ -27,7 +27,8 @@
                     android:layout_height="24dp"
                     android:layout_margin="8dp"/>
 
-                <android.support.v7.widget.AppCompatAutoCompleteTextView
+                <AutoCompleteTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/search_view"
                     android:layout_weight="20"
                     android:text="@string/hint_idea"
@@ -35,6 +36,7 @@
                     android:maxLines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
 
                 <ImageView
 

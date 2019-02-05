@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
-
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        PreferenceManager.init(this);
+
+        // autocomplete
+        AutoCompleteTextView ideaAutoComplete = findViewById(R.id.search_view);
+        String[] cities = getResources().getStringArray(R.array.categories);
+        ArrayAdapter<String> stringArrayAdapter =
+                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cities);
+        ideaAutoComplete.setAdapter(stringArrayAdapter);
+
 
         mIdeaViewModel = ViewModelProviders.of(this).get(IdeaViewModel.class);
 
@@ -41,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == NEW_WORD_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
-            Idea idea = new Idea(data.getStringExtra(NewIdeaActivity.EXTRA_REPLY), "", (new Date()).getTime());
+            Idea idea = new Idea(data.getStringExtra(NewIdeaActivity.EXTRA_IDEA),
+                                 data.getStringExtra(NewIdeaActivity.EXTRA_CATEGORY));
             mIdeaViewModel.insert(idea);
         } else {
             Toast.makeText(

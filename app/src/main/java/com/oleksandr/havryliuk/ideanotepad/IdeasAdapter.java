@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,12 +16,14 @@ public class IdeasAdapter extends RecyclerView.Adapter<IdeasAdapter.WordViewHold
         private final TextView ideaItemView;
         private final TextView category;
         private final TextView date;
+        private final LinearLayout layout;
 
         private WordViewHolder(View itemView) {
             super(itemView);
             ideaItemView = itemView.findViewById(R.id.text);
             category = itemView.findViewById(R.id.category);
             date = itemView.findViewById(R.id.date);
+            layout = itemView.findViewById(R.id.main_layout);
         }
     }
 
@@ -42,6 +45,7 @@ public class IdeasAdapter extends RecyclerView.Adapter<IdeasAdapter.WordViewHold
             holder.ideaItemView.setText(current.getText());
             holder.category.setText(current.getCategory());
             holder.date.setText(Utils.getFormatDate(current.getDate()));
+            holder.layout.setBackground(Utils.getColorByRGB(current.getColor()));
         } else {
             // Covers the case of data not being ready yet.
             holder.ideaItemView.setText("No Ideas");

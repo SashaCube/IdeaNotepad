@@ -5,6 +5,8 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import java.util.Date;
+
 @Entity(tableName = "ideas")
 public class Idea {
 
@@ -20,14 +22,32 @@ public class Idea {
     @ColumnInfo(name = "category")
     private String category;
 
+
+    @ColumnInfo(name = "color")
+    private String color;
+
     @NonNull
     @ColumnInfo(name = "date")
     private long date;
 
-    public Idea(@NonNull String text, String category, @NonNull long date) {
+    public Idea(@NonNull String text, String category) {
         this.text = text;
         this.category = category;
-        this.date = date;
+        this.date = (new Date()).getTime();
+
+        color = PreferenceManager.getString(category);
+        if(color == null) {
+            this.color = Utils.getRandomColor();
+            PreferenceManager.setString(category, color);
+        }
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @NonNull

@@ -16,6 +16,7 @@
         app:cardElevation="@dimen/cardview_default_elevation">
 
         <LinearLayout
+            android:id="@+id/main_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_one"
@@ -46,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:layout_weight="11"
+                    android:layout_weight="7"
                     android:background="@drawable/round_white"
                     android:padding="5dp">
 
@@ -65,7 +66,7 @@
                         android:layout_marginLeft="27dp"
                         android:layout_marginRight="10dp"
                         android:layout_toEndOf="@+id/layoutDate"
-                        android:text="01 January 1996"
+                        android:text="01 January 1996 10:29"
                         android:textColor="#606060" />
                 </FrameLayout>
 
