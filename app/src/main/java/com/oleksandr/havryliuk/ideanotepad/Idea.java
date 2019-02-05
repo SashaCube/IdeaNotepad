@@ -5,6 +5,9 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import com.oleksandr.havryliuk.ideanotepad.utils.PreferenceManager;
+import com.oleksandr.havryliuk.ideanotepad.utils.Utils;
+
 import java.util.Date;
 
 @Entity(tableName = "ideas")

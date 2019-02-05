@@ -1,4 +1,4 @@
-package com.oleksandr.havryliuk.ideanotepad;
+package com.oleksandr.havryliuk.ideanotepad.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

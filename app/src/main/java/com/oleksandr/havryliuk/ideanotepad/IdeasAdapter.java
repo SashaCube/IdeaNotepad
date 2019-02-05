@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.oleksandr.havryliuk.ideanotepad.utils.Utils;
+
 import java.util.List;
 
 public class IdeasAdapter extends RecyclerView.Adapter<IdeasAdapter.WordViewHolder> {

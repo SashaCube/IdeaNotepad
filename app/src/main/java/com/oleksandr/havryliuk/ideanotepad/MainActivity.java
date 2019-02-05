@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
+import com.oleksandr.havryliuk.ideanotepad.utils.PreferenceManager;
+
 public class MainActivity extends AppCompatActivity {
 
     private IdeaViewModel mIdeaViewModel;
