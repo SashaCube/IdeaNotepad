@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:text="idea"
+        android:labelFor="@+id/edit_idea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/edit_new_idea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:text="idea"
+        android:labelFor="@+id/edit_new_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/edit_new_category"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="work..."
+        android:textSize="18sp" />
+
+    <Button
+        android:layout_margin="20dp"
+        android:id="@+id/button_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/button_edit"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_margin="20dp"
+        android:id="@+id/button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/button_delete"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -29,7 +29,6 @@ public class NewIdeaActivity extends AppCompatActivity {
         mEditCategoryView = findViewById(R.id.edit_category);
 
         // autocomplete
-        mEditCategoryView = findViewById(R.id.edit_category);
         Set<String> keys = PreferenceManager.getAllKeys();
         String[] categories = keys.toArray(new String[keys.size()]);
         ArrayAdapter<String> stringArrayAdapter =
