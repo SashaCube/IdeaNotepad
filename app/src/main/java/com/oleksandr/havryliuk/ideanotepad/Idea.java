@@ -17,15 +17,14 @@ public class Idea {
     @ColumnInfo(name = "text")
     private String text;
 
-    @ColumnInfo(name = "id")
+    @ColumnInfo(name = "category")
     private String category;
 
     @NonNull
     @ColumnInfo(name = "date")
     private long date;
 
-    public Idea(@NonNull int id, @NonNull String text, String category, @NonNull long date) {
-        this.id = id;
+    public Idea(@NonNull String text, String category, @NonNull long date) {
         this.text = text;
         this.category = category;
         this.date = date;

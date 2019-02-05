@@ -1,22 +1,28 @@
 package com.oleksandr.havryliuk.ideanotepad;
 
+import android.app.Application;
+import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.ViewModel;
 
 import java.util.List;
 
-public class IdeaViewModel extends ViewModel {
+public class IdeaViewModel extends AndroidViewModel {
 
     private LiveData<List<Idea>> ideas;
     private IdeasRepository repository;
 
-    public IdeaViewModel(){
-        repository = new IdeasRepository();
+    public IdeaViewModel(Application application){
+        super(application);
+        repository = IdeasRepository.getRepository(application);
         ideas = repository.getAllIdeas();
     }
 
 
     public LiveData<List<Idea>> getAllIdeas() {
         return ideas;
+    }
+
+    public void insert(Idea idea){
+        repository.insert(idea);
     }
 }
